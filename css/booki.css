@@ -1,0 +1,1269 @@
+
+@font-face 
+{
+    font-family:'raleway';
+    src:url('../images/font/Raleway-VariableFont_wght.ttf') format("truetype"),
+        url('../images/font/raleway-variablefont_wght-webfont.woff2') format('woff2'),
+        url('../images/font/raleway-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+}
+
+/*                                       Page entière                                      */
+body
+{    
+    font-family:'raleway',Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;    
+    height: auto;
+    margin: auto;
+
+}
+/* Empeche uL de créer un espace au debut du bloc uL*/
+ul
+{
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;                                                                                                                                           
+    padding-inline-start: 0px;
+}
+
+
+/* Enleve les sousligner dans les liens */
+a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+/*Titres Principaux*/
+h1
+{
+    color: black;
+    font-size:20px;
+    font-weight: bold;
+    height: auto;
+    width: 100%;
+    margin: 5px 0px 10px 0px;
+}
+/* Titres secondaires*/
+h2
+{
+    color: black;
+    font-size:20px;
+    font-weight: bold;
+    margin:10px;
+}
+
+h3
+{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 0px;
+}
+/*  */
+h4
+{
+    color: black;
+    font-size: 13px;
+    font-weight:lighter;
+    margin: 10px 0px;
+}
+/* */
+h5
+{
+    display: flex;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: black;
+    font-size: 12px;
+    font-weight: lighter;
+    margin:0px;
+}    
+/*                                 entete Header                                 */
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height:auto;
+    width:100%;
+    padding:10px 5px;
+}
+/*                                         Bannière                                          */
+
+/* Comprend image BOOKI et les liens en haut à droite */
+#banniere
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    height: auto;
+    width: 100%;
+}
+/* Image BOOKI */
+#banniere img
+{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: auto;
+    width: 75px;
+    padding: 0px 0px 0px 5px;
+}
+/* Les liens en haut à droite de la page */
+#banniere nav
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    margin: 0px 20px 0px 0px;
+}
+#banniere nav ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    list-style-type:none;
+    height: 50px;
+    width: 100%;    
+}
+#banniere nav ul li
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#banniere nav ul li a
+{
+    font-size: 12px;
+    color: black;
+}
+#banniere nav ul li:hover
+{
+    border-top: 3px #0065FC solid;       
+}
+#banniere nav ul li a:hover
+{   
+    color:#0065FC;
+}
+/*                                        Fin de la Bannière                                  */
+
+/*                                 Zone du bouton de Recherche                                */
+
+/* Bloc de la zone de reherche */
+#rechmars
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    margin: 10px 0px 10px 0px;
+}
+/* Icone "destination" */
+.indication
+{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    background-color: #F2F2F2;
+    color: black;
+    border-radius: 20px 0px 0px 20px;   
+    height: 38px;
+    width: 30px;
+}
+form
+{
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    border: none;
+    margin: 15px 0px 15px 0px;
+    padding: 0px 0px 0px 0px;
+}
+/* Couleur et dimension de "Rechercher" */
+.formulaire
+{
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    border: 1px #F2F2F2 solid;
+    font-weight: bold;
+    font-size: medium;
+    height: 36px;
+    width: auto;
+    padding: 0px 10px 0px 10px;
+}
+.formulaire:hover
+{
+    background-color: #F2F2F2;
+}
+/* Dimension de la zone de "Rechercher" */
+form label input
+{
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0px 15px 15px 0px;
+    border: rgb(211, 202, 202) 1px solid;
+    height: 37px;
+    width: auto;
+    padding: 0px 15px 0px 15px;
+}
+form label input:active
+{
+    font-weight: bold;
+    color: #0065FC;
+    border: #0065FC 1px solid;
+    background-color:#DEEBFF;
+    height: 40px;
+    width: auto;
+}
+.loupe
+{
+   display: none;
+}
+/*                                Fin de la Zone du bouton de Recherch                      */
+
+/*                                    Bouton filtre de la page                              */
+header nav
+{
+    display:flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    align-items: center;
+    height: auto;
+    width:90%;
+    margin: 10px 0px;
+}
+/* Titre "Filtres" */
+header nav h3
+{
+    order: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    height: auto;
+    width:6%;    
+    margin: 0px 20px 0px 0px;
+}
+/* Bloc contenant tous les filtres */
+#navfiltre
+{
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    list-style-type:none;
+    height:auto;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px 250px 0px 0px;
+}
+
+/* Contient l'icone et le texte de chaque filtre */
+.cadre
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center; 
+    color: black;  
+    border-radius: 70px 70px 70px 70px;
+    border: 1px solid #DEEBFF;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 15px;    
+    height: 30px;
+    width: auto;  
+    margin: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 0px;
+}
+/* toutes les icones de Filtres */
+.cadre div
+{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;    
+    color:  #0065FC;
+    background-color: #DEEBFF;  
+    border-radius: 20px;    
+}
+/* bouton zone texte*/
+.cadre input
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 3px;
+    border: 0;
+    border-radius: 10px;
+}
+/* Changement de forme pour Filtre navigation*/
+#navfiltre .cadre:hover, .cadre input:hover
+{
+    background-color:#0065FC;
+    color:white;
+}
+#navfiltre .cadre:active,.cadre input:active
+{
+    box-shadow: inset -2px -2px 2px white,
+    inset -2px -2px 2px white;
+}
+
+/*                                Fin de Bouton filtre de la page                            */
+
+/* text !Plus de 500 logements */ 
+.info
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;   
+    height: auto;
+    width: 100%;
+    margin: 10px 0px;
+}
+.icon
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    height:auto;
+    width: 15px;
+    border-radius: 150px 150px 150px 150px;
+    border: 1px #DEEBFF solid;
+    font-size: 12px;
+    margin: 5px;
+    padding: 3px;
+}
+
+/* Fin de text !Plus de 500 logements */
+
+/*                                    Partie principale de la page                           */
+main
+{
+    display:flex;
+    flex-direction:column;
+    height: 100%;
+    width: 100%;
+}
+
+/*                                          Première partie                                   */
+
+#premiere
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:100%;
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+}
+/* Couleur des étoiles */
+.etoile
+{   display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    order: 3;
+    color: #0065FC;
+    margin: 5px 0px;
+    font-size: 16px;
+}
+
+/*                                  Hébergements à Marseille                               */
+/* Alignement verticale des titres et des blocs 
+dans chaque partie hebergement et les plus populaire */
+
+.alignement
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    background-color: #F2F2F2;
+    border-radius: 10px 10px 10px 10px;
+    height: auto;
+    width: 70%;
+    margin:0px 15px 0px 0px;
+    padding: 10px 0px;
+}
+.hebergement
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+}
+
+/*Forme des blocs dans hébergement*/
+.ensemble
+{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    border-radius: 20px;
+    border: 1px #F2F2F2 solid ;    
+    height: 250px;
+    width: 28%;
+    margin:20px 0px
+}
+.ensemble:hover
+{
+    background-color: #DEEBFF;
+    box-shadow: 6px 6px 6px #0065FC;
+}
+
+
+/*les dimensions des images dans Hébergement*/
+.imgherber
+{
+    border-radius: 20px 20px 0px 0px;
+    height: 170px;
+    width: 100%;
+}
+/* Taille des commentaires sous photo */
+.echo
+{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;    
+    text-decoration: none;
+    border-radius: 0px 0px 20px 20px;    
+    height: 70px;
+    width: 95%;   
+    margin: 0px 0px 10px 0px; 
+    padding: 5px 5px;       
+}
+/* Afficher Plus */
+.afficher_plus
+{    
+    text-decoration: none;
+    margin: 30px 15px;
+}
+.afficher_plus h3:hover
+{
+    color: #0065FC;
+}
+/*                                   Fin d'Hébergements à Marseille                          */
+
+/*                                          Les Plus Populaires                             */
+.colonne
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 80%;
+    width: 30%;
+    background-color: #F2F2F2;
+    border-radius: 10px 10px 10px 10px;
+    margin: 0px 0px 0px 10px;
+    padding: 10px 0px;
+}
+/*  text et icone les plus populaires */
+.lesplus
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 90%;
+    margin: 0px 30px 0px 0px;
+}
+.populaire
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 20px 0px 20px 0px
+}
+/* Forme des blocs dans "les plus populaires" */
+.groupe
+{  
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    border: #F2F2F2 solid 1px;
+    height: 125px;
+    width: 90%;
+    margin: 10px 10px 10px 10px;
+}
+.groupe:hover
+{
+    background-color: #DEEBFF;
+    box-shadow: 6px 6px 6px #0065FC;
+}
+
+/* Taille des commentaires sous photo "les plus populaires" */
+.lettre
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    border-radius: 0px 20px 20px 0px; 
+    height: auto;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+/* Les dimensions des images dans les plus populaires */
+.imgpopulaire
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0px 0px 20px;
+    height: 100%;
+    width: 40%;
+}
+/*                                  Fin Les Plus Populaires                                 */
+
+/*                                       Deuxième partie                                      */
+
+#deuxieme
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;    
+    height: 450px;
+    width: 100%;
+    margin: 10px 0px;
+}
+/* Bloc regroupant les différents Blocs */
+.ajuste
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px;
+    height: 90%; 
+    width: 100%;  
+}
+/* Regroupe les deux bloc les plus gros de Activités */
+.vieux_calanque
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    background-color: white;
+    height:100%;
+    width:20%;    
+    border: 1px #F2F2F2 solid ;
+    border-radius: 10px;
+}
+.vieux_calanque:hover
+{
+    background-color: #DEEBFF;
+    box-shadow: 6px 6px 6px #0065FC;
+}
+
+/* texte sous image*/
+.highttext
+{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;        
+    color: black;
+    border-radius: 0px 0px 10px 10px;
+    height: 50px;
+    width: 100%;
+
+    padding:0px 0px 0px 15px;
+}
+/*les dimensions des grandes images dans Activités*/
+.imggrand
+{
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    width: 100%;
+}
+/*Forme des petits blocs regroupés dans Activités*/
+.fuse
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    width: 20%;
+    margin: 0px;
+}
+/*Forme des petits blocs dans Activités*/
+.souder
+{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;   
+    border: #F2F2F2 solid 1px;
+    border-radius: 10px 10px 10px 10px;    
+    height: 48%;
+    width: 100%;   
+}
+.souder:hover
+{
+    background-color: #DEEBFF;
+    box-shadow: 6px 6px 6px #0065FC;
+}
+/* texte sous image*/
+.smalltext
+{        
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;        
+    color: black;
+    border-radius: 0px 0px 10px 10px;
+    height: 25%;
+    width: 100%;
+    padding:0px 0px 0px 25px;
+}
+/*les dimensions des petites images dans Activités*/
+.imgactivite
+{
+    border-radius: 10px 10px 0px 0px;
+    height: 80%;
+    width: 100%;
+}
+/*                                    Fin de Deuxième partie                                  */
+
+/*                                      Pied de page                                         */
+
+footer
+{   
+    background-color: #F2F2F2;
+    height: auto;
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+} 
+/* Bloc Nav dans footer */
+footer nav
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px;
+}
+/* Bloc de chaque partie de apropos, nos hebergements, asssistance */
+footer nav ul
+{ 
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: flex-start;
+    list-style-type:none;
+    height: auto;
+    width:100%;
+    margin: 5px 0px;
+    padding: 0px;
+}
+li
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    height: 30px;
+    width: 100%;
+}
+footer nav ul li h4:hover
+{
+    color: #0065FC;
+}
+
+/*                                      Fin de Pied de page                                   */
+
+/*                                     Fin de Page entière                                    */
+
+
+
+/*                              version Tablette                                     */
+
+@media screen and (min-width:768px) and (max-width:992px)
+{
+    h3
+    {
+        font-size: 14px;
+    }
+    
+    .hebergement
+    {
+        display: flex;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items:flex-start;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+    }
+    /*Forme des blocs dans hébergement*/
+    .ensemble
+    {
+        background-color: white;
+        display: flex;
+        flex-direction: column;    
+        font-size: 10px;
+        border-radius: 20px 20px 20px 20px;
+        border: 1px #F2F2F2 solid;        
+        height: 30%;
+        width: 40%;
+    }
+
+    /* Forme des blocs dans "les plus populaires" */
+    .groupe
+    {  
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 20px 20px 20px 20px;
+        border: #F2F2F2 solid 1px;
+        height: 250px;
+        width: 90%;
+        margin: 10px 10px 10px 10px;
+    }
+    /* Taille des commentaires sous photo "les plus populaires" */
+    .lettre
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        border-radius: 0px 20px 20px 0px;        
+        height: 40%;
+        width: 85%;
+    }
+
+    /* Les dimensions des images dans les plus populaires */
+    .imgpopulaire
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px 20px 0px 0px;
+        height: 60%;
+        width: 100%;
+    } 
+    #deuxieme
+    {
+        height: 350px;
+    }  
+    
+}
+/*                          Fin de la version Tablette              */
+
+/*                                  Version Mobile                   */
+
+@media screen and (max-width: 767px)
+{
+    /*                      Page entière                            */
+    body
+    {
+        display: flex;        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 100%;
+        max-width: 767px;        
+        width: 95%;
+        font-family:"Raleway";
+        margin: auto;
+    }
+    h1
+    {
+        font-size: 30px;
+    }
+    h2
+    {
+        color: black;
+        font-size:28px;
+        font-weight: bold;
+        margin: 5px 0px 5px 10px;
+    }
+    h3
+    {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 8px 0px;
+    }
+    h4
+    {
+        font-size:20px;
+        margin: 10px 0px;
+    }
+    h5
+    {
+        color: black;
+        font-weight: lighter;
+        font-size: 18px;
+    }
+    li 
+    {
+        margin: 10px 0px;
+    }   
+
+    /* Comprend image BOOKI et les liens en haut à droite */
+    #banniere
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        height:auto;
+        width: 100%;
+    }
+    /* Image BOOKI */
+    #banniere img
+    {
+        height: 100%;
+        width: 30%;
+    }
+    /* Les liens en haut à droite de la page */
+    #banniere nav
+    {
+        display: flex;
+        flex-direction: row;        
+        justify-content:center;
+        align-items: center;
+        font-size: 25px;
+        height:100px;
+        width: 100%;    
+        margin: 0px;
+    } 
+    #banniere nav ul
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+        list-style-type:none;
+        height: 55px;
+        width: 100%;    
+    }
+    #banniere nav ul li
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        margin: 0px;
+    }
+   
+    #banniere nav ul li a
+    {        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 25px;
+        height: 50px;
+        width: 100%;
+        margin: 0px;
+    }
+    #banniere nav ul li:hover
+    {
+        border-top-color: transparent;
+        border-bottom: 3px #0065FC solid;
+        height: 50px;
+        width: 100%;
+    }
+    #banniere nav ul li a:hover
+    {   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0065FC;       
+        height: 100%;
+        width: 100%;
+    }
+    /* Fin des liens en haut à droite de la page */
+
+    /*  Titre trouvez votre hébergement  */
+    body header h1
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 85%;
+        margin: 10px 0px 10px 40px;
+    }
+    /* Titre En plein centre ville  */
+    body header h4
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: lighter;        
+        height: 50px;
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
+    /*                                 Zone du bouton de Recherche                                */
+
+    /* Bloc de la zone de reherche */
+    #rechmars
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;        
+        height: 100px;
+        width: 100%;
+        padding:0px 20px 0px 20px;
+    }
+    /* Icone "destination" */
+    .indication
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color:#F2F2F2;
+        color: black;
+        border-radius: 20px 0px 0px 20px;
+        font-size: 30px;   
+        height: 66px;
+        width: 60px;
+    }
+    .recherche
+    {
+        display:flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;       
+    }     
+    /* Dimension de la zone de "Rechercher" */
+    .formulaire
+    {
+        height:65px;
+        width: 70%;
+    }
+    .formulaire:active
+    {
+        border: rgb(240, 240, 240) 1px solid;
+        background-color:rgb(240, 240, 240) ;
+
+        height: 65px;
+        width: 70%;
+    }
+    /* Couleur et dimension du mot "Rechercher" */
+    form label
+    {
+       display: none;       
+    }
+    .loupe
+    {
+        order: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        color: white;
+        background-color: #0065FC;
+        border-radius: 10px;
+        font-size: 35px;
+        padding: 15px;
+    }
+    .loupe:active
+    {
+        background-color: #F2F2F2;
+        color: #0065FC;
+    }
+    /*                           Fin de la Zone du bouton de Recherch                    */ 
+    
+    
+    /*                                    Bouton filtre de la page                              */
+    header nav
+    {
+        display:flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+        height: auto;
+        width:100%;
+        margin: 10px 0px;
+    }
+    /* Titre "Filtres" */
+    header nav h3
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items:center;
+        height: auto;
+        width:100%;
+        
+    }
+    /* Bloc contenant tous les filtres */
+    #navfiltre
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        list-style-type:none;
+        height:auto;
+        width: 100%;
+        font-weight: bold;
+        font-size: 35%;
+        margin: 0px 250px 0px 0px;
+        padding: 10px;
+    }
+
+    /* Contient l'icone et le texte de chaque filtre */
+    .cadre
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; 
+        align-items: center; 
+        color: black;  
+        border-radius: 70px;
+        border: 1px solid #deebff;
+        text-decoration: none;
+        font-style: normal;
+        font-size: 18px;    
+        height: 100%;
+        width: auto;  
+        margin: 10px 15px;
+        padding: 0px 10px 0px 0px;
+    }
+    /* toutes les icones de Filtres */
+    .cadre div
+    {    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        font-size: 25px;    
+        color:  #0065FC;
+        background-color: #deebff;        
+        padding: 20px;   
+        border-radius: 30px;    
+    }
+    /* bouton zone texte*/
+    .cadre input
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 5px 10px;
+        border: 0;
+        border-radius: 10px;
+    }
+    /*                                Fin de Bouton filtre de la page                            */
+    /*                          première partie                       */
+    #premiere
+    {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }   
+    /*                         les plus populaires                   */  
+    .colonne
+    {
+        order: 1;
+        height: 100%;
+        width: 100%;
+        margin: 10px 0px 20px 0px;
+    }
+    .lettre
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    /*                  Hebergements à Marseille                   */
+    .alignement
+    {
+        order: 2;
+        height: 100%;
+        width: 100%;
+        margin: 10px 0px 20px 0px;
+    }
+    .hebergement
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        height: auto;
+        width: 98%;    
+    }
+    .ensemble
+    {
+        height:450px;
+        width: 100%;
+        margin: 20px 5px;
+    }
+    .imgherber
+    {
+        height: 75%;
+        width: 100%;
+    }
+    .echo
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 25%;
+        width: 100%;
+    }
+
+    /*                       deuxième partie                        */
+    #deuxieme
+    {
+        height: auto;
+    }
+    .ajuste
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        height: auto;
+        width: 100%;        
+    }
+    .text
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-start ;
+        align-items: center;
+        height: 30%;
+        width: 97%;
+    }    
+    .vieux_calanque
+    {
+        height: 400px;
+        width: 98%;
+        margin: 10px 0px;
+    }
+    .fuse
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 850px;
+        width: 98%;
+        margin: 5px 0px;
+        padding: 5px 0px;
+    }
+    .souder
+    {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;    
+        border: #F2F2F2 solid 1px;
+        border-radius: 10px 10px 10px 10px;        
+        height:400px;
+        width: 100%;
+        margin: 0px;    
+    }
+    .imgactivite
+    {
+        height:80%;
+        width:100%;   
+    }
+    /*                           Pied de page                             */
+    footer
+    {   
+        background-color: #F2F2F2;
+        height: auto;
+        width: 100%;
+        margin: 10px 0px 20px 0px;
+    }
+    /* Bloc Nav dans footer */
+    footer nav
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px;
+    }
+    /* Taille de la police des titres dans Footer */  
+    footer nav a
+    {
+        color: black;
+        font-size: 18px;
+    }
+}
+    
